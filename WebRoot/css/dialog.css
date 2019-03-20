@@ -1,0 +1,127 @@
+/* 取消默认弹出框样  */
+.ui-dialog .ui-dialog-titlebar{
+ display:none;
+}
+.ui-dialog .ui-dialog-content{
+ padding:0px;
+}
+.ui-dialog{
+  padding:0px;
+}
+.ui-widget-content{
+ background:#fff;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+-moz-border-radius-bottomright: 0px;
+-webkit-border-bottom-right-radius: 0px;
+-khtml-border-bottom-right-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-bottom-left-radius: 0px;
+-khtml-border-bottom-left-radius: 0px;
+border-bottom-left-radius: 0px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+-moz-border-radius-topright: 0px;
+-webkit-border-top-right-radius: 0px;
+-khtml-border-top-right-radius: 0px;
+border-top-right-radius: 0px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+-moz-border-radius-topleft: 0px;
+-webkit-border-top-left-radius: 0px;
+-khtml-border-top-left-radius: 0px;
+border-top-left-radius: 0px;
+}
+
+.dialogClose{
+   position:absolute;
+   top:8px;
+   right:15px; 
+   display:block;
+   width: 14px;
+   height: 14px;
+   background: transparent url(../images/icon_nav.gif) no-repeat 0px -125px;
+   cursor:pointer;
+}
+#addNumber ul{
+  float:left;
+  width:230px;
+  height:auto;
+  padding:15px  0px 0px 15px;
+  overflow:hidden;
+}
+#addNumber ul li{
+  text-align:left;
+  clear:both;
+  width:100%;
+  height:20px;
+  margin-bottom:15px;
+}
+#addHfBlackList ul{
+  float:left;
+  width:auto;
+  height:auto;
+  padding:15px  0px 0px 15px;
+  overflow:hidden;
+}
+#addHfBlackList ul li{
+  text-align:left;
+  clear:both;
+  width:100%;
+  height:20px;
+  margin-bottom:15px;
+}
+
+.numberInput{
+ float:left;
+ width:95px;
+ height:20px;
+ line-height:20px;
+ border:none;
+ background:none;
+}
+
+#orderCheck ul ,#refundDialog ul,#failCheck ul,#artifill_resconfirm_diag ul{
+  width:410px;
+  margin:35px auto;
+  font-family:'微软雅黑';
+}
+#orderCheck ul li ,#refundDialog ul li,#failCheck ul li,#artifill_resconfirm_diag ul li{  
+   clear:both;
+   padding:5px 0px;
+}
+#refundDialog ul li{
+  margin-bottom:10px;
+}
+#orderCheck ul .delBtnWrap ,#refundDialog ul .delBtnWrap,#failCheck ul .delBtnWrap,#artifill_resconfirm_diag ul .delBtnWrap{
+  padding-left:140px;
+}
+#refundDialog ul .delBtnWrap{
+  padding-left:100px;
+}
+/*人工审核 */
+#tradeDetailDia .segLine{
+   height:30px;
+   border-left:2px dashed #00ccff ;
+   width:425px;
+   margin-left:45px;
+}
+#tradeDetailDia dl{
+   background:transparent url(../images/segLine.gif) repeat-y 8px 0px;
+   width:398px;
+   margin:0 auto;
+   text-align:left;
+   text-indent:25px;
+}
+#tradeDetailDia dt{
+  background:transparent url(../images/dotted.gif) no-repeat 0px 0px;
+  font-weight:bold;
+  padding-bottom:5px;
+}
+#tradeDetailDia dd{
+  height:20px;
+  line-height:20px;
+}

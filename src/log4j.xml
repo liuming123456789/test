@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="Log_All"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="D:/log/dfwl_admin/all.txt" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d [%t] [%-5p] %c {%F:%L} - %m%n" />
+		</layout>
+	</appender><!--
+	%-5p: %p表示该日志的级别，例如：INFO, DEBUG, ERROR等，"-5"的意思是：若日志的级别长度小于5，则右边用空格填充。因为日志级别最大是5，所以这样做的目的是为了对齐，美观。
+
+%c{15}: logger的命名空间，"15"表示层数，假设当前logger名字空间是"a.b.c"，那么%c{2}的值就是：b.c
+	--><appender name="Log_Info" class="org.apache.log4j.DailyRollingFileAppender">
+	   <param name="File" value="D:/log/dfwl_admin/info.txt"></param>
+	   <param name="Append" value="true"></param>
+	   <layout class="org.apache.log4j.PatternLayout">
+	      <param name="ConversionPatten" value="%d [%t] [%-5p] %c {%F:%L} - %m%n"></param>
+	   </layout>
+	   <filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="INFO" />
+			<param name="LevelMin" value="INFO" />
+		</filter>
+	</appender>
+	<appender name="Log_Error" class="org.apache.log4j.DailyRollingFileAppender">
+	   <param name="File" value="D:/log/dfwl_admin/error.text"></param>
+	   <param name="Append" value="true"></param>
+	   <layout class="org.apache.log4j.PatternLayout">
+	      <param name="ConversionPatten" value="%d [%t] [%-5p] %c {%F:%L} -%m%n"></param>
+	   </layout>
+	   <filter class="org.apache.log4j.varia.LevelRangeFilter">
+	      <param name="LevelMax" value="ERROE"></param>
+	      <param name="LevelMin" value="ERROE"></param>
+	   </filter>
+	</appender>
+	<appender name="Log_Console"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d [%t][%-5p] %c {%F:%L} - %m%n" />
+		</layout>
+	</appender>
+	<logger name="logger">
+		<appender-ref ref="Log_Info" />
+		<appender-ref ref="Log_Error" />
+		<appender-ref ref="Log_All" />
+		<appender-ref ref="Log_Console" />
+	</logger>
+	
+</log4j:configuration>
